@@ -1,0 +1,6 @@
+framework module Pods_qPacer {
+  umbrella header "Pods-qPacer-umbrella.h"
+
+  export *
+  module * { export * }
+}
