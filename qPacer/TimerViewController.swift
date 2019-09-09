@@ -17,9 +17,8 @@ class TimerViewController: UIViewController {
     var time = 0;
     var timer = Timer();
     var tapCounter = 0;
-    
-
     var array = [IntegerLiteralType]()
+    var graphTimes = "";
     
     
     override func viewDidLoad() {
@@ -35,40 +34,48 @@ class TimerViewController: UIViewController {
         if(tapCounter%2==1){
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerViewController.action), userInfo: nil, repeats: true)
         }else if(tapCounter%2==0){
-            timer.invalidate();
-            array.append(time)
-            time = 0;
-            timerLabel.text = String(time);
-            arrayLabel.text = String(array[array.count-1])
+            //timer.invalidate();
+            reset();
         }
-        
+        timerLabel.text = String(time);
+        arrayLabel.text = "Q number:" + String(tapCounter);
     }
-    @IBAction func startTimer(_ sender: UIButton) {
+    /*@IBAction func startTimer(_ sender: UIButton) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerViewController.action), userInfo: nil, repeats: true)
-    }
-    
+    }*/
     @objc func action(){
         time += 1;
         timerLabel.text = String(time);
     }
-    
-    @IBAction func resetTimer(_ sender: UIButton) {
-        timer.invalidate();
+    func reset (){
         array.append(time)
         time = 0;
         timerLabel.text = String(time);
         arrayLabel.text = String(array[array.count-1])
     }
+    func printTime() -> String{
+        for time in array{
+            let arr  = (graphTimes)+" "+String(time) //+"<space>"+ to +","+ if you need lap times are comma separated.
+            graphTimes = arr
+        }
+        return graphTimes;
+    }
+    //var graphTimesShown = printTime();
+    
+    @IBAction func resetTimer(_ sender: UIButton) {
+        timer.invalidate();
+        //reset();
+    }
     
     @IBAction func pauseTimer(_ sender: UIButton) {
         timer.invalidate();
+        timerLabel.text = "0";
     }
     @IBAction func printTimes(_ sender: UIButton) {
-        for time in array{
-            let arr  = (self.printTimesLabel.text ?? "")+" "+String(time) //+"<space>"+ to +","+ if you need lap times are comma separated.
-            self.printTimesLabel.text = arr
-        }
+        self.printTimesLabel.text = printTime();
     }
+    //lazy var text = printTimesLabel.text;
+    
     
     
 }
