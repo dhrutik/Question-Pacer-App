@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EB6ED342325728400E8FF72 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB6ED332325728400E8FF72 /* GraphViewController.swift */; };
 		0EDBC7BB22F8AD1400426CC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBC7BA22F8AD1400426CC9 /* AppDelegate.swift */; };
 		0EDBC7BD22F8AD1400426CC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBC7BC22F8AD1400426CC9 /* ViewController.swift */; };
 		0EDBC7C022F8AD1400426CC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDBC7BE22F8AD1400426CC9 /* Main.storyboard */; };
@@ -20,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EB6ED332325728400E8FF72 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		0EDBC7B722F8AD1400426CC9 /* qPacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qPacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDBC7BA22F8AD1400426CC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EDBC7BC22F8AD1400426CC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				0EDBC7BC22F8AD1400426CC9 /* ViewController.swift */,
 				0EDBC7CF22F8B2D900426CC9 /* TimerViewController.swift */,
 				0EDBC7BE22F8AD1400426CC9 /* Main.storyboard */,
-				0EB6ED332325728400E8FF72 /* GraphViewController.swift */,
 				C095DD652323F5EF00687060 /* Results.storyboard */,
 				0EDBC7C422F8AD1900426CC9 /* Assets.xcassets */,
 				0EDBC7C622F8AD1900426CC9 /* LaunchScreen.storyboard */,
@@ -217,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EDBC7D022F8B2D900426CC9 /* TimerViewController.swift in Sources */,
-				0EB6ED342325728400E8FF72 /* GraphViewController.swift in Sources */,
 				0EDBC7C322F8AD1400426CC9 /* qPacer.xcdatamodeld in Sources */,
 				0EDBC7BD22F8AD1400426CC9 /* ViewController.swift in Sources */,
 				0EDBC7BB22F8AD1400426CC9 /* AppDelegate.swift in Sources */,

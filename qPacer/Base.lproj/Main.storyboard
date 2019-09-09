@@ -153,32 +153,5 @@
             </objects>
             <point key="canvasLocation" x="785.50724637681162" y="126.5625"/>
         </scene>
-        <!--Graph View Controller-->
-        <scene sceneID="2XT-rY-8hE">
-            <objects>
-                <viewController id="dQc-tu-SHx" customClass="GraphViewController" customModule="qPacer" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nkQ-tV-gvb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFD-Xc-jl3">
-                                <rect key="frame" x="9" y="303" width="385" height="251"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="RhM-ap-Zki"/>
-                    </view>
-                    <connections>
-                        <outlet property="graphLabel" destination="jFD-Xc-jl3" id="SjR-Hu-yzv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zpI-go-eEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1469.5652173913045" y="126.5625"/>
-        </scene>
     </scenes>
 </document>
