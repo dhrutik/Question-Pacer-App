@@ -122,6 +122,9 @@
                                 <state key="normal" title="show graph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4Fu-ts-MMQ" kind="show" id="zaP-L1-OIO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz6-fr-B0r">
                                 <rect key="frame" x="33" y="399" width="191" height="193"/>
@@ -152,6 +155,14 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="785.50724637681162" y="126.5625"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="zoW-xq-0fc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Results.storyboard" storyboardName="Results" id="4Fu-ts-MMQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2u8-5V-BCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309" y="119"/>
         </scene>
     </scenes>
 </document>
