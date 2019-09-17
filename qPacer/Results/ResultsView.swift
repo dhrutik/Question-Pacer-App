@@ -10,12 +10,14 @@ import Foundation
 import UIKit
 import Charts
 
-class ResultsView: UIView, ChartViewDelegate {
+class ResultsView: UIScrollView, ChartViewDelegate {
     
     let titleLabel = UILabel()
     let barChartView = HorizontalBarChartView()
     var chartHeight = CGFloat()
     let barHeight:Int = 60
+    var dataPoints: [Double] = [3.8, 3.1, 1.0, 2.8, 4.6, 7.8, 4.1, 2.7, 5.6, 2.3, 6.1, 2.9, 3.7]   // values for the bars
+
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -30,7 +32,6 @@ class ResultsView: UIView, ChartViewDelegate {
     }
     
     func layoutForm(){
-        
         self.backgroundColor = UIColor.white
         
         // welcome label
@@ -42,13 +43,14 @@ class ResultsView: UIView, ChartViewDelegate {
         
         self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.titleLabel.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 150).isActive = true
+        self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 30).isActive = true
         
         self.layoutIfNeeded()
     }
     
     func pageLayoutWithData() {
-        self.chartHeight = CGFloat(500)
+
+        self.chartHeight = CGFloat(self.dataPoints.count * self.barHeight)
         
         self.addSubview(self.barChartView)
         self.barChartView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,27 +58,30 @@ class ResultsView: UIView, ChartViewDelegate {
         self.barChartView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
         self.barChartView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         self.barChartView.heightAnchor.constraint(equalToConstant: self.chartHeight).isActive = true
+        self.contentSize = CGSize(width: self.frame.width, height: self.chartHeight * 1.15)
         self.updateChartWithData()
     }
     
     func updateChartWithData() {
-        //let stringFormatter = ChartStringFormatter()        // allow labels to be shown for bars
-        //let percentFormatter = PercentValueFormatter()      // allow labels to be shown for bars
+        let stringFormatter = ChartStringFormatter()       // allow labels to be shown for bars
+        
         var dataEntries: [BarChartDataEntry] = []
         
         // data and names of the bars
-        let dataPoints: [Double] = [3.8,3.1, 1.0, 2.8, 0.6, 7.8, 4.1, 2.7, 5.6]   // values for the bars
-        //stringFormatter.nameValues = self.store.equitiesForBuyNames      // labels for the y axis
+        stringFormatter.nameValues = ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", "Q11", "Q12", "Q13"]//self.store.questionLabels      // labels for the y axis
+        
+        self.dataPoints.reverse()
+        stringFormatter.nameValues.reverse()
         
         // formatting, the horizontal bar chart is rotated so the axis labels are odd
-        //barChartView.xAxis.valueFormatter = stringFormatter // allow labels to be shown for bars
+        barChartView.xAxis.valueFormatter = stringFormatter // allow labels to be shown for bars
         barChartView.xAxis.drawGridLinesEnabled = false     // hide horizontal grid lines
         barChartView.xAxis.drawAxisLineEnabled = false      // hide right axis
-        //barChartView.xAxis.labelFont = UIFont(name: Constants.appFont.regular.rawValue, size: Constants.fontSize.small.rawValue)!
-        //barChartView.xAxis.setLabelCount(stringFormatter.nameValues.count, force: false)
+        barChartView.xAxis.labelFont = UIFont(name: "HelveticaNeue", size: 12)!
+        barChartView.xAxis.setLabelCount(stringFormatter.nameValues.count, force: false)
         barChartView.xAxis.granularityEnabled = true
         barChartView.xAxis.granularity = 1.0
-        //barChartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        barChartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
         
         barChartView.rightAxis.enabled = false              // hide values on bottom axis
         barChartView.leftAxis.enabled = false               // hide values on top axis
@@ -88,9 +93,6 @@ class ResultsView: UIView, ChartViewDelegate {
         barChartView.drawValueAboveBarEnabled = false       // places values inside the bars
         
         barChartView.leftAxis.axisMinimum = 0.0             // required to show values on the horz bars, its a bug
-        //if let maxBarValue = self.equitiesForBuyExpectedROI.max() {
-            //barChartView.leftAxis.axisMaximum = maxBarValue + 2
-        //}
         
         for (index, dataPoint) in dataPoints.enumerated() {
             let dataEntry = BarChartDataEntry(x: Double(index), y: dataPoint)
@@ -98,10 +100,9 @@ class ResultsView: UIView, ChartViewDelegate {
         }
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "")
-        chartDataSet.colors = [UIColor.blue]
-        //chartDataSet.valueFont = UIFont(name: Constants.appFont.regular.rawValue, size: Constants.fontSize.small.rawValue)!
+        chartDataSet.colors = [UIColor(red: 0x09/255, green: 0xcc/255, blue: 0xaf/255, alpha: 1.0)]
+        chartDataSet.valueFont = UIFont(name: "HelveticaNeue", size: 12)!
         chartDataSet.valueTextColor = UIColor.white
-        //chartDataSet.valueFormatter = percentFormatter      // formats the values into a %
         let chartData = BarChartData(dataSet: chartDataSet)
         
         self.barChartView.data = chartData

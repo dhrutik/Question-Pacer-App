@@ -6,6 +6,6 @@ target 'qPacer' do
   use_frameworks!
 
   # Pods for qPacer
-	pod 'Charts'
+	pod 'Charts', '~> 3.0.1'
 
 end
