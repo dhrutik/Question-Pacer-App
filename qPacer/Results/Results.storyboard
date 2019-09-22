@@ -8,10 +8,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
     </dependencies>
     <scenes>
-        <!--Results View Controler-->
+        <!--Results View Controller-->
         <scene sceneID="1hu-jx-Eso">
             <objects>
-                <viewController id="Mui-Ob-4dY" customClass="ResultsViewControler" customModule="qPacer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController id="Mui-Ob-4dY" customClass="ResultsViewController" customModule="qPacer" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFZ-Dr-tId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-398" y="-6"/>

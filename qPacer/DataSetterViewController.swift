@@ -13,6 +13,7 @@ class DataSetterViewController: UIViewController {
     
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var timeGivenLabel: UILabel!
+    @IBOutlet weak var questionsGiven: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,15 @@ class DataSetterViewController: UIViewController {
         let currentValue = Int(sender.value)
         
         timeGivenLabel.text = "\(currentValue)"
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is TimerViewController
+        {
+            let vc = segue.destination as? TimerViewController
+            vc?.numberOfQs1 = Int(questionsGiven.text!) ?? 0
+            vc?.numberOfMins1 = Int(timeSlider.value)
+            
+        }
     }
     
 }

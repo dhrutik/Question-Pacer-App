@@ -19,7 +19,8 @@ class TimerViewController: UIViewController {
     var tapCounter = 0;
     var array = [IntegerLiteralType]()
     var graphTimes = "";
-    
+    var numberOfQs1 = 0;
+    var numberOfMins1 = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +77,15 @@ class TimerViewController: UIViewController {
     }
     //lazy var text = printTimesLabel.text;
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ResultsViewController
+        {
+            let vc = segue.destination as? ResultsViewController
+            vc?.numberOfQs = numberOfQs1
+            vc?.numberOfMins = numberOfMins1
+            
+        }
+    }
     
 }
 

@@ -112,8 +112,10 @@
                         <viewLayoutGuide key="safeArea" id="XYi-id-KDG"/>
                     </view>
                     <connections>
+                        <outlet property="questionsGiven" destination="A7h-Ak-xYE" id="QBQ-2N-3v7"/>
                         <outlet property="timeGivenLabel" destination="105-NS-UxY" id="YJI-Bu-XIu"/>
                         <outlet property="timeSlider" destination="AkC-cB-abs" id="VGv-3f-vVE"/>
+                        <segue destination="4Fu-ts-MMQ" kind="show" identifier="Results.storyboard" id="oiW-fG-RIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hh6-Ir-cbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -227,4 +229,7 @@
     <resources>
         <image name="Logo" width="238" height="239"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zaP-L1-OIO"/>
+    </inferredMetricsTieBreakers>
 </document>
