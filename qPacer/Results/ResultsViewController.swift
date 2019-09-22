@@ -23,7 +23,7 @@ class ResultsViewController: UIViewController {
         self.view = self.resultsViewInst
         print(numberOfQs)
         print(numberOfMins)
-        print("average time: " + String(numberOfMins/numberOfQs) + " mins")
+        print("average time: " + String(Float(numberOfMins/numberOfQs)) + " mins")
         
     }
     /*override func viewWillAppear(_ animated: Bool) {
