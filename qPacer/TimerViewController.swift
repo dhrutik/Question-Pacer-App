@@ -78,6 +78,7 @@ class TimerViewController: UIViewController {
     //lazy var text = printTimesLabel.text;
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        /*
         if segue.destination is ResultsViewController
         {
             let vc = segue.destination as? ResultsViewController
@@ -85,6 +86,7 @@ class TimerViewController: UIViewController {
             vc?.numberOfMins = numberOfMins1
             
         }
+         */
     }
     
 }

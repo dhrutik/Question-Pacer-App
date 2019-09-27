@@ -16,8 +16,9 @@
 		0EDBC7C822F8AD1900426CC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDBC7C622F8AD1900426CC9 /* LaunchScreen.storyboard */; };
 		0EDBC7D022F8B2D900426CC9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBC7CF22F8B2D900426CC9 /* TimerViewController.swift */; };
 		6385976FC1FEA08665093F97 /* Pods_qPacer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699FF13936035D1F57B02ADD /* Pods_qPacer.framework */; };
-		C04DD2BE232B272B0053FD8B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD2BD232B272B0053FD8B /* ResultsViewController.swift */; };
-		C04DD2C0232B2B370053FD8B /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DD2BF232B2B370053FD8B /* ResultsView.swift */; };
+		C00B8583233A36CD0070C166 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B8582233A36CC0070C166 /* ChartView.swift */; };
+		C00B8585233A37010070C166 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00B8584233A37010070C166 /* ChartView.xib */; };
+		C00B858B233DAA760070C166 /* Chart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00B858A233DAA760070C166 /* Chart.storyboard */; };
 		C095DD662323F5EF00687060 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C095DD652323F5EF00687060 /* Results.storyboard */; };
 		C0B64DD9233078DC00593663 /* ChartStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B64DD8233078DC00593663 /* ChartStringFormatter.swift */; };
 /* End PBXBuildFile section */
@@ -34,8 +35,9 @@
 		0EDBC7C922F8AD1900426CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EDBC7CF22F8B2D900426CC9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		699FF13936035D1F57B02ADD /* Pods_qPacer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qPacer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C04DD2BD232B272B0053FD8B /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		C04DD2BF232B2B370053FD8B /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		C00B8582233A36CC0070C166 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		C00B8584233A37010070C166 /* ChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
+		C00B858A233DAA760070C166 /* Chart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chart.storyboard; sourceTree = "<group>"; };
 		C095DD652323F5EF00687060 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		C0B64DD8233078DC00593663 /* ChartStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartStringFormatter.swift; sourceTree = "<group>"; };
 		D75ECE37673278D35B314DDD /* Pods-qPacer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qPacer.debug.xcconfig"; path = "Target Support Files/Pods-qPacer/Pods-qPacer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,10 +111,11 @@
 		C0B64DD42330763500593663 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				C04DD2BD232B272B0053FD8B /* ResultsViewController.swift */,
 				C095DD652323F5EF00687060 /* Results.storyboard */,
-				C04DD2BF232B2B370053FD8B /* ResultsView.swift */,
 				C0B64DD8233078DC00593663 /* ChartStringFormatter.swift */,
+				C00B8582233A36CC0070C166 /* ChartView.swift */,
+				C00B8584233A37010070C166 /* ChartView.xib */,
+				C00B858A233DAA760070C166 /* Chart.storyboard */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -177,6 +180,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00B8585233A37010070C166 /* ChartView.xib in Resources */,
+				C00B858B233DAA760070C166 /* Chart.storyboard in Resources */,
 				0EDBC7C822F8AD1900426CC9 /* LaunchScreen.storyboard in Resources */,
 				0EDBC7C522F8AD1900426CC9 /* Assets.xcassets in Resources */,
 				0EDBC7C022F8AD1400426CC9 /* Main.storyboard in Resources */,
@@ -233,11 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00B8583233A36CD0070C166 /* ChartView.swift in Sources */,
 				0EDBC7D022F8B2D900426CC9 /* TimerViewController.swift in Sources */,
 				0E087C1623316561008D0F3F /* DataSetterViewController.swift in Sources */,
 				C0B64DD9233078DC00593663 /* ChartStringFormatter.swift in Sources */,
-				C04DD2C0232B2B370053FD8B /* ResultsView.swift in Sources */,
-				C04DD2BE232B272B0053FD8B /* ResultsViewController.swift in Sources */,
 				0EDBC7C322F8AD1400426CC9 /* qPacer.xcdatamodeld in Sources */,
 				0EDBC7BD22F8AD1400426CC9 /* ViewController.swift in Sources */,
 				0EDBC7BB22F8AD1400426CC9 /* AppDelegate.swift in Sources */,

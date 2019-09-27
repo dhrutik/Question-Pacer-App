@@ -13,23 +13,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var field: UITextField!
     @IBOutlet weak var label: UILabel!
+    //var chartsViewInst = ChartsView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
-        
-        
-    
     }
     
     @IBAction func changeText(_ sender: UIButton) {
         let text1 = field.text;
         label.text = text1;
     }
-    
-    
-    
-    
+
     
 }
 
