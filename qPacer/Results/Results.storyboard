@@ -12,7 +12,7 @@
         <scene sceneID="1hu-jx-Eso">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFZ-Dr-tId" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="Results" title="ResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mui-Ob-4dY" userLabel="ResultsViewController" customClass="ViewController" customModule="qPacer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Results" title="ResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mui-Ob-4dY" userLabel="ResultsViewController" customClass="ResultsViewController" customModule="qPacer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ptX-x9-XKg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

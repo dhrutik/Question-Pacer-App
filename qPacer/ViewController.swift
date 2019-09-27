@@ -9,16 +9,19 @@
 import UIKit
 
 var arraySize = 0;
-class ViewController: UIViewController {
+class ResultsViewController: UIViewController {
 
     @IBOutlet weak var field: UITextField!
     @IBOutlet weak var label: UILabel!
-    //var chartsViewInst = ChartsView()
+    var numberOfQs = Int()
+    var numberOfMins = Int()
+    var questionTimes = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        print("numberOfQs:", numberOfQs)
+        print("numberOfMins:", numberOfMins)
+        print("questionTimes:", questionTimes.count)
     }
     
     @IBAction func changeText(_ sender: UIButton) {
